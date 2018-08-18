@@ -104,7 +104,7 @@ namespace WyszukiwanieXML
             //}
 
             // Przykład 3 - pobieranie id mieszkania i typ oraz pow poszczególnych pokoi
-            var mieszkania = element.Descendants("mieszkanie").Select(m=>m);
+            var mieszkania = element.Descendants("mieszkanie").Select(m=>m).ToArray();
             foreach(var mieszkanie in mieszkania)
             {
                 Console.WriteLine($"=> Mieszkanie ID:{ mieszkanie.Attribute("id").Value}");
